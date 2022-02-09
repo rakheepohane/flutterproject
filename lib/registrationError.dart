@@ -16,7 +16,7 @@ class _ErrorState extends State<Error> {
           title: const Text("Grossary App"),
         ),
         body: const Center(
-          child: Text("Registration Unsuccessful!!",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold, color: Colors.red),),
+          child: Text("Registration Unsuccessfull!!",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold, color: Colors.red),),
         ));
   }
 

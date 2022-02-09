@@ -42,11 +42,15 @@ class _JsonPageState extends State<JsonPage> {
       ),
       body:Center(
           child: ListView.builder(itemBuilder:(context,index){
-            return ListTile(
-              title: Text(catArray[index]["catName"]),
-              // leading: Image.network(catArray[index]["catImage"]),
-              subtitle: Text("Id: ${catArray[index]["catId"]}"),
-              trailing: Text(catArray[index]["slug"]),
+            return Card(
+              margin: EdgeInsets.all(9),
+              elevation: 9,
+              child: ListTile(
+                title: Text(catArray[index]["catName"],style: TextStyle(fontWeight: FontWeight.bold,),),
+                // leading: Image.network(catArray[index]["catImage"]),
+                subtitle: Text("Id: ${catArray[index]["catId"]}"),
+                trailing: Text(catArray[index]["slug"],style: TextStyle(color: Colors.purple,fontWeight: FontWeight.bold),),
+              ),
             );
           },
             itemCount: catArray.length,)
