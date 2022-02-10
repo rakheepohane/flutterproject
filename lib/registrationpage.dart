@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:grossaryapp/registrationError.dart';
 import 'package:http/http.dart' as http;
 
 
@@ -115,10 +116,11 @@ class _RegisterState extends State<Register> {
           builder: (context) =>  LoginPage()));
     }
     else {
+
       // Navigator.push(context, MaterialPageRoute(
       //     builder: (context) => Error()));
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-        content: Text("Registration Failed...",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+        content: Text("Registration Failed...",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
       ));
 
     }
