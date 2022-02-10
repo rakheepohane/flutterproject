@@ -3,7 +3,6 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'registrationpage.dart';
-import 'errorpage.dart';
 import 'grossarydetails.dart';
 
 import 'package:http/http.dart' as http;
@@ -109,10 +108,11 @@ class _LoginPageState extends State<LoginPage> {
           builder: (context) =>  JsonPage()));
     }
     else {
-     // Navigator.push(context, MaterialPageRoute(
-        //  builder: (context) =>  showErrorDialog(context)));
-      Navigator.push(context, MaterialPageRoute(
-    builder: (context) =>  ErrorPage()));
+    //   Navigator.push(context, MaterialPageRoute(
+    // builder: (context) =>  ErrorPage()));
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text("Login Failed...",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+      ));
       
     }
 
